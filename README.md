@@ -1,4 +1,4 @@
 # Data-Explorer
 Data LTE (Load, Transform, Explore) Web App
 
-Use the app in the following URLs: http://34.82.55.159:8501 or https://cutt.ly/lm-data-explorer
+Use the app in the following URL: https://share.streamlit.io/0lmagalhaes0/data-explorer/main/main.py
