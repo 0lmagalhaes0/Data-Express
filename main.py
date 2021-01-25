@@ -5,7 +5,7 @@ from scipy import stats
 import datetime as dt
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-import seaborn as sns
+#import seaborn as sns
 import altair as alt
 import base64
 import os
