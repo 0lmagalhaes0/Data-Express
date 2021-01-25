@@ -1,9 +1,8 @@
-altair=4.1.0=py_1
-base58=2.1.0=pyhd8ed1ab_0
-matplotlib=3.3.3=py38haa244fe_0
-numpy=1.19.5=py38h0cc643e_1
-pandas=1.2.1=py38h4c96930_0
-pickleshare=0.7.5=py_1003
-python=3.8.6=h7840368_4_cpython
-scipy=1.6.0=py38h5f893b4_0
-streamlit=0.75.0=pyhd8ed1ab_0
+altair==4.1.0
+base58==2.1.0
+matplotlib==3.3.3
+numpy==1.19.5
+pandas==1.2.1
+python=3.8.6
+scipy==1.6.0
+streamlit==0.75.0
