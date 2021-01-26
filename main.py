@@ -23,13 +23,11 @@ if path is None:
     st.warning("Please load your dataset in CSV format")
     st.stop()
 else:
-    pass
-
-data = pd.read_csv(str(path))
-col = data.columns.values
-st.write("This dataset has a total of",len(data),"rows and",len(data.columns),"columns.")
-st.write("This is a small piece of it:")
-st.write(data.head(3))
+    data = pd.read_csv(str(path))
+    col = data.columns.values
+    st.write("This dataset has a total of",len(data),"rows and",len(data.columns),"columns.")
+    st.write("This is a small piece of it:")
+    st.write(data.head(3))
 
 
 # DELETE COLUMNS
