@@ -5,7 +5,6 @@ from scipy import stats
 import datetime as dt
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-#import seaborn as sns
 import altair as alt
 import base64
 import os
@@ -18,9 +17,10 @@ st.markdown("<h3 style='text-align: center; color: black;'>Let's clean, organize
 # LOAD
 st.write(" --- ")
 st.subheader("Load your Dataset")
-path = st.text_input("Type your file path:")
-if path == "":
-    st.warning("Please load your dataset in CSV format (\"path/to/your file.csv\")")
+
+path = st.file_uploader("Choose a file", type=['csv'])
+if uploaded_file is None:
+    st.warning("Please load your dataset in CSV format)
     st.stop()
 else:
     pass
