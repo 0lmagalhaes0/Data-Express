@@ -19,7 +19,7 @@ st.write(" --- ")
 st.subheader("Load your Dataset")
 
 path = st.file_uploader("Choose a file", type=['csv'])
-if uploaded_file is None:
+if path is None:
     st.warning("Please load your dataset in CSV format")
     st.stop()
 else:
