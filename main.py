@@ -15,7 +15,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 st.markdown("<h1 style='text-align: center; color: darkred;'>DATA ANALYSIS EXPRESS</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center; color: black;'>Let's clean, organize, format and create visualizations for your raw data</h1>", unsafe_allow_html=True)
 
-port = st.sidebar.checkbox("Me selecione para Português")
+port = st.checkbox("Me selecione para Português")
 
 # LOAD
 st.write(" --- ")
