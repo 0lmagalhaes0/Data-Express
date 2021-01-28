@@ -12,7 +12,7 @@ import os
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 port = False
-if st.checkbox("Português"):
+if st.checkbox("Português                                               Web App by LMagalhaes"):
     port = True
 
 st.markdown("<h1 style='text-align: center; color: darkred;'>DATA ANALYSIS EXPRESS</h1>", unsafe_allow_html=True)
