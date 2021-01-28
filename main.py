@@ -15,7 +15,9 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 st.markdown("<h1 style='text-align: center; color: darkred;'>DATA ANALYSIS EXPRESS</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center; color: black;'>Let's clean, organize, format and create visualizations for your raw data</h1>", unsafe_allow_html=True)
 
-port = st.checkbox("Me selecione para Português")
+port = False
+if st.checkbox("Me selecione para Português"):
+    port = True
 
 # LOAD
 st.write(" --- ")
@@ -309,7 +311,7 @@ else:
     if st.checkbox("Me selecione para mudar o formato de seus dados (util para datas, números, coordenadas, etc) (para uma melhor compatibilidade "
                "em gráficos, por favor converta datas para \"data & hour\" e Booleans para Texto)"):
         st.subheader("Formatando seus Dados")
-        formats = ["Select","Integer (Números inteiros)","Float (Números com casas decimais)","String (Texto)","Boolean (True/False)","Date & Time"]
+        formats = ["Selecione","Integer (Números inteiros)","Float (Números com casas decimais)","String (Texto)","Boolean (True/False)","Date & Time"]
         format_choice = st.multiselect("Escolha os formatos para os quais você deseja converter suas colunas erradas:",formats)
 for i in format_choice:
     if i == formats[1]:
@@ -498,7 +500,7 @@ def distribution():
     else:
         x_col = st.selectbox("Escolha a coluna para o eixo X:", col, key=x_colcount)
         y_col = st.selectbox("Escolha a coluna para o eixo Y:", col, key=y_colcount)
-        filtering = st.checkbox("Filtrer os resultados", key=filteringcount)
+        filtering = st.checkbox("Filtre os resultados", key=filteringcount)
         if filtering == True:
             map_filter = st.selectbox("Escolha a coluna:",col,key=map_filtercount)
             filterS = ["selecione"]
