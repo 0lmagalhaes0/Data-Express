@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 import altair as alt
 import base64
 import os
+import xlrd
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
