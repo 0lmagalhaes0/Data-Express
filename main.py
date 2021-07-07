@@ -25,23 +25,23 @@ st.markdown("<h3 style='text-align: center; color: black;'>Let's clean, organize
 st.write(" --- ")
 if port == False:
     st.subheader("Load your Dataset")
-    path = st.file_uploader("Choose a file", type=['csv'])
+    path = st.file_uploader("Choose a file", type=['xlsx'])
     if path is None:
-        st.warning("Please load your dataset in CSV format")
+        st.warning("Please load your dataset in xlsx format")
         st.stop()
     else:
-        data = pd.read_csv(path)
+        data = pd.read_excel(path)
         col = data.columns.values
         st.write("This dataset has a total of",len(data),"rows and",len(data.columns),"columns.\nThis is a small piece of it:")
         st.write(data.head(3))
 else:
     st.subheader("Carregue seus dados")
-    path = st.file_uploader("Escolha seu arquivo", type=['csv'])
+    path = st.file_uploader("Escolha seu arquivo", type=['xlsx'])
     if path is None:
         st.warning("Apenas arquivos CSV (seu arquivo.csv)")
         st.stop()
     else:
-        data = pd.read_csv(path)
+        data = pd.read_excel(path)
         col = data.columns.values
         st.write("Seus dados contém ",len(data)," linhas e ",len(data.columns),"colunas.\nAqui está uma pequena amostra:")
         st.write(data.head(3))
