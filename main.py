@@ -36,7 +36,7 @@ if port == False:
             st.write("This dataset has a total of",len(data),"rows and",len(data.columns),"columns.\nThis is a small piece of it:")
             st.write(data.head(3))
         except:
-            data = pd.read_csv(path,errors='ignore')
+            data = pd.read_csv(path,encoding='utf-8')
             col = data.columns.values
             st.write("This dataset has a total of",len(data),"rows and",len(data.columns),"columns.\nThis is a small piece of it:")
             st.write(data.head(3))
