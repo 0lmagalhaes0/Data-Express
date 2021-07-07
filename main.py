@@ -27,9 +27,9 @@ if port == False:
     st.subheader("Load your Dataset")
     file_bytes = st.file_uploader("Choose a file")
     path = file_bytes.read()
-    if file_bytes is None:
-        st.warning("Please load your dataset in xlsx or csv format")
-        st.stop()
+    #if file_bytes is None:
+    #    st.warning("Please load your dataset in xlsx or csv format")
+    #    st.stop()
     else:
         try: 
             data = pd.read_excel(path)
