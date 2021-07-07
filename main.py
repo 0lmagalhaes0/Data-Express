@@ -26,7 +26,7 @@ st.write(" --- ")
 if port == False:
     st.subheader("Load your Dataset")
     path = st.file_uploader("Choose a file")
-    if file_bytes is None:
+    if path is None:
         st.warning("Please load your dataset in xlsx or csv format")
         st.stop()
     else:
