@@ -31,12 +31,12 @@ if port == False:
         st.stop()
     else:
         try: 
-            data = pd.read_excel(path,encoding='cp1252', errors='ignore')
+            data = pd.read_excel(path,encoding='ISO-8859-1')
             col = data.columns.values
             st.write("This dataset has a total of",len(data),"rows and",len(data.columns),"columns.\nThis is a small piece of it:")
             st.write(data.head(3))
         except:
-            data = pd.read_csv(path,encoding='cp1252', errors='ignore')
+            data = pd.read_csv(path,encoding='ISO-8859-1')
             col = data.columns.values
             st.write("This dataset has a total of",len(data),"rows and",len(data.columns),"columns.\nThis is a small piece of it:")
             st.write(data.head(3))
