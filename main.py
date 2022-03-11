@@ -19,7 +19,7 @@ st.markdown("<h3 style='text-align: center; color: black;'>Let's clean, organize
 st.write(" --- ")
 st.subheader("Load your Dataset")
 uploaded_file = st.file_uploader("Choose a file")
-sheet = st.text_input("If you are loading an excel file, please inform the sheet name:")
+#sheet = st.text_input("If you are loading an excel file, please inform the sheet name:")
 #path = st.text_input("Type your file path:")
 #if path == "":
 #    st.warning("Please load your dataset in CSV format (\"path/to/your file.csv\")")
@@ -27,11 +27,7 @@ sheet = st.text_input("If you are loading an excel file, please inform the sheet
 #else:
 #    pass
 
-if uploaded_file == '':
-    try:
-        data = pd.read_csv(uploaded_file)
-    except:
-        data = pa.read_excel(uploaded_file,sheetname=str(sheet))
+data = pd.read_csv(uploaded_file)
         
 col = data.columns.values
 st.write("This dataset has a total of",len(data),"rows and",len(data.columns),"columns.")
