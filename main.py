@@ -27,7 +27,7 @@ sheet = st.text_input("If you are loading an excel file, please inform the sheet
 #else:
 #    pass
 
-if uploaded_file not None:
+if uploaded_file == '':
     try:
         data = pd.read_csv(uploaded_file)
     except:
